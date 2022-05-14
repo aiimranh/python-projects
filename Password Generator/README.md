@@ -19,8 +19,8 @@ You can skip any or multiple of this features, If you don't need to add in your 
 
 
 
-![screenshot01](Screenshots\Screenshot1.png)<br><br><br>
-![screenshot02](Screenshots\Screenshot2.png)<br>
+![screenshot1](./Screenshots/Screenshot1.png)<br><br><br>
+![screenshot2](./Screenshots/Screenshot2.png)<br>
 
 ## Requirements:
 
