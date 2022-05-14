@@ -18,9 +18,8 @@ If you want to include any character to your password must provide capital alpha
 You can skip any or multiple of this features, If you don't need to add in your password. <br><br>
 
 
-
-![screenshot1](./Screenshots/Screenshot1.png)<br><br><br>
-![screenshot2](./Screenshots/Screenshot2.png)<br>
+<img src="./Screenshots/Screenshot1.png" width=800 />
+<img src="./Screenshots/Screenshot2.png" width=800 />
 
 ## Requirements:
 
