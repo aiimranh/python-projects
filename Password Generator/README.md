@@ -11,13 +11,13 @@
 
 
 
-### Note 01:
+### Note 01_:
 If you want to include any character to your password must provide capital alphabet. See the attached image to clearify. <br>
 
-### Note 02:
+### Note 02_:
 You can skip any or multiple of this features, If you don't need to add in your password. <br><br>
 
-
+## Screenshots:
 <img src="./Screenshots/Screenshot1.png" width=800 />
 <img src="./Screenshots/Screenshot2.png" width=800 />
 
