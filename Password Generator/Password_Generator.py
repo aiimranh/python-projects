@@ -9,7 +9,7 @@ unique = list(input("unique alpha: ").lower())
 unique_digit = list(input("unique digit: ").lower())
 purpose = list(input("purpose : "))
 
-
+# use as variable to randomly select small or capital letter
 checker = [cap_alpha,small_alpha]
 
 # list for containing all password
