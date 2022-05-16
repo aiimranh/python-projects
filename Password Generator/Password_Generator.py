@@ -1,35 +1,47 @@
 import random
 
-names = list(input("Name of the Sites : "))
+# value store in variable from input
+web_name = list(input("Name of the Sites : "))
 types = list(input("Type of the Sites : "))
 cap_alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 small_alpha = cap_alpha.lower()
 unique = list(input("unique alpha: ").lower())
 unique_digit = list(input("unique digit: ").lower())
 purpose = list(input("purpose : "))
+
+
 checker = [cap_alpha,small_alpha]
 
-
+# list for containing all password
 lis = list()
+
+# function for checking capital or not
 def iscap(test):
     if test > 'A' and test < 'Z':
         return True
+    return False
 
-for name in names:
+
+# checking each letter of the website name and convert to small.
+for name in web_name:
     if iscap(name) == True:
         lis.append(name.lower())
 
 
+# checking each letter of the website type and convert to small.
 for type in types:
     if iscap(type) == True:
         lis.append(type.lower())
 
+
+
 lis2 = list()
-def first():
+
+# common function for website name and website category
+def website():
     [i, checkA, checkB, checkE, checkF, checkI, checkM, checkS, checkW] = [0,0,0,0,0,0,0,0,0]
 
     for check in lis:
-
         if check == "a" and checkA == 0:
             x = lis.pop(i)
             lis2.append(x)
@@ -84,11 +96,14 @@ def first():
         i += 1
         
 
-first()
+# calling website
+website()
 
+# copying all data from lis2 to lis3
 lis3 = lis2.copy()
 
-def uniqucy():
+# function for unique alphabet
+def unique_alpha():
     [checkA, checkI, checkN]= [0,0,0]
 
     for letter in unique:
@@ -112,63 +127,65 @@ def uniqucy():
             lis3.append(letter.upper())
             lis.append(letter.lower())
 
-uniqucy()
 
-# number
-def uniqucy_dig():
-    [checkA, checkI, checkN]= [0,0,0]
+# call unique alphabet
+unique_alpha()
 
+# deleting the list lis2
+del lis2
+
+# Function for Unique Digit 
+def unique_digits():
     for digit in unique_digit:
-        if digit not in lis2:
-            if digit == "3" and checkI == 0:
-                lis.append('9')
-                checkI = 1
-            elif digit == "7" and checkA == 0:
-                lis.append("8")
-                checkA = 1
-            elif digit == "9" and checkN == 0:
-                lis.append("3")
-                checkN = 1
-            else:
-                lis.append('7')
+        lis.append(digit)
 
 
-uniqucy_dig()
+# calling unique digit
+unique_digits()
 
+# creating list 4 for pu
 lis4 = list()
 for pur in purpose:
     if iscap(pur) == True:
-        lis4.append(pur)
+        lis4.append(pur.lower())
 
 
-def purposy():
+# function for purpose in alpha
+def purpose_alpha():
     checkA,checkI = (0,0)
     checkN = 0
     for letter in lis4:
         if letter not in lis3:
-            if letter == "I" and checkI == 0:
-                lis3.append('I')
+            if letter == "i" and checkI == 0:
+                lis3.append(letter)
                 lis.append("!")
                 checkI = 1
-            elif letter == "A" and checkA == 0:
-                lis3.append(letter.upper())
+            elif letter == "a" and checkA == 0:
+                lis3.append(letter)
                 lis.append("@")
                 checkA = 1
-            elif letter == "N" and checkN == 0:
-                lis3.append(letter.upper())
+            elif letter == "n" and checkN == 0:
+                lis3.append(letter)
                 lis.append("u")
                 checkN = 1
             else:
-                lis3.append(letter.upper())
-                lis.append(letter.lower())
+                lis3.append(letter)
+                lis.append(letter)
         else:
-            lis3.append(letter.upper())
-            lis.append(letter.lower())
+            lis3.append(letter)
+            lis.append(letter)
 
-purposy()
 
+# calling purpose_alpha function
+purpose_alpha()
+
+# copying all data to password
 password = lis
 
+# deleting the lists
+del lis,lis3,lis4
+
+# for the upper case in the first letter
 try:
     x = password[0].upper()
     password.pop(0)
@@ -177,17 +194,19 @@ try:
 except:
     pass
 
+# function for random choices
 def keyword(values):
     return random.choice(values)
 
 
+# adding an extra random alphabet at first to your password make it more strong.
 while(True):
     value = keyword(keyword(checker))
     if value not in password:
         password.insert(0,value)
         break
 
-
+# adding an extra random alphabet at last to your password make it more strong.
 while(True):
     value = keyword(keyword(checker))
     leng = len(password)
