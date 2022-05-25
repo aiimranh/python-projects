@@ -7,7 +7,7 @@
 * You can give your unique password string that also include in your password.
 * You can give your unique password numbers that also include in your password.
 * What purpose for you use your websites that also iclude in your password.
-* Most Import note it add custom two character starting and ending of  the your output password.<br><br>
+* Most Import note it add custom two character starting and ending of the your output password, if don't provide any layer key.<br><br>
 
 
 

@@ -8,6 +8,7 @@ small_alpha = cap_alpha.lower()
 unique = list(input("unique alpha: ").lower())
 unique_digit = list(input("unique digit: ").lower())
 purpose = list(input("purpose : "))
+layer = list(input('Blocking layer : '))
 
 # use as variable to randomly select small or capital letter
 checker = [cap_alpha,small_alpha]
@@ -185,33 +186,53 @@ password = lis
 # deleting the lists
 del lis,lis3,lis4
 
-# for the upper case in the first letter
-try:
-    x = password[0].upper()
-    password.pop(0)
-    password.insert(0,x)
+def block_layer1():
+    # function for random choices
+    def keyword(values):
+        return random.choice(values)
 
-except:
-    pass
+    # for the upper case in the first letter
+    try:
+        x = password[0].upper()
+        password.pop(0)
+        password.insert(0,x)
 
-# function for random choices
-def keyword(values):
-    return random.choice(values)
+    except:
+        pass
 
 
-# adding an extra random alphabet at first to your password make it more strong.
-while(True):
-    value = keyword(keyword(checker))
-    if value not in password:
-        password.insert(0,value)
-        break
+    # adding an extra random alphabet at first to your password make it more strong.
+    while(True):
+        value = keyword(keyword(checker))
+        if value not in password:
+            password.insert(0,value)
+            break
 
-# adding an extra random alphabet at last to your password make it more strong.
-while(True):
-    value = keyword(keyword(checker))
-    leng = len(password)
-    if value not in password:
-        password.insert(leng,value)
-        break
+    # adding an extra random alphabet at last to your password make it more strong.
+    while(True):
+        value = keyword(keyword(checker))
+        leng = len(password)
+        if value not in password:
+            password.insert(leng,value)
+            break
+
+def block_layer2():
+    # creating new list
+    lis = list()
+
+    # checking each letter of the layer.
+    for x in layer:
+        if iscap(x) == True:
+            lis.append(x)
+
+    
+    # adding an extra random alphabet at first and last to your password make it more strong.
+    password.insert(0,lis[0])
+    password.insert(len(password),lis[-1])
+
+if len(layer) == None or len(layer) == 0:
+    block_layer1()
+else:
+    block_layer2()
 
 print(f'Password : [ {"".join(password)} ]')
