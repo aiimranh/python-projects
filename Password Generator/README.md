@@ -4,6 +4,7 @@
 
 * You can include your websites name in your password.
 * You can include your websites categories in your password.
+* You can include your opening year of websites in your password.
 * You can give your unique password string that also include in your password.
 * You can give your unique password numbers that also include in your password.
 * What purpose for you use your websites that also iclude in your password.
