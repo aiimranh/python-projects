@@ -7,7 +7,7 @@ cap_alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 small_alpha = cap_alpha.lower()
 years = list(input("Enter Opening Year: "))
 unique = list(input("unique alpha: ").lower())
-unique_digit = list(input("unique digit: ").lower())
+unique_digit = list(input("unique digit: "))
 purpose = list(input("purpose : "))
 layer = list(input('Blocking layer : '))
 
