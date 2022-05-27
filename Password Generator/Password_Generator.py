@@ -181,7 +181,6 @@ def purpose_alpha():
 # calling purpose_alpha function
 purpose_alpha()
 
-print(doubicapte_finder)
 # deleting the doubicapte_finder list
 del doubicapte_finder
 
@@ -239,4 +238,4 @@ def block():
 block()
 
 # final password
-print(f'Password : [ {"".join(main_password)} ]')
+print(f'\nPassword : [ {"".join(main_password)} ]')
