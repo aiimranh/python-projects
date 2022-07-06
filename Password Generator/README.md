@@ -14,11 +14,13 @@
 * There are some character programatically change to other character such as A->@, B->&, E->#, F->£, M->w</span> etc.
 
 ### Note 01_:
-If you want to include any character to your password must provide capital alphabet.
+* If you want to include any character to your password must provide capital alphabet.
 
 Example 01: Suppose you provide <b>website name</b> : `FACEbook`. then `FACE` is only added to the password.
 
 See the attached image to clearify. <br>
+
+* Unique Password and Unique Number can be provide lowercase or uppercase, all are added to the password.
 
 ### Note 02_:
 You can skip any or multiple of this features, If you don't need to add in your password. <br><br>
