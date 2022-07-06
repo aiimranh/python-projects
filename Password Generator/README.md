@@ -11,7 +11,7 @@
 * Most import note, it adds custom two character starting and ending of the your output password, if don't provide any blocking layer key.<br><br>
 
 ## Transition Features:
-* There are some character programatically change to other character such as A->@, B->&, E->#, F->£, M->w</span> etc.
+* There are some character programatically change to other character such as `A->@`, `B->&`, `E->#`, `F->£`, `m->w` etc.
 
 ### Note 01_:
 * If you want to include any character to your password must provide capital alphabet.
@@ -23,7 +23,7 @@ See the attached image to clearify. <br>
 * Unique Password and Unique Number can be provide lowercase or uppercase, all are added to the password.
 
 ### Note 02_:
-You can skip any or multiple of this features, If you don't need to add in your password. <br><br>
+You can skip any or multiple of this features [ pressing `enter` key], If you don't need to add in your password. <br><br>
 
 ## Screenshots:
 <img src="./Screenshots/Screenshot1.png" width=800 />
